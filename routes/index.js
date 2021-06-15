@@ -27,7 +27,7 @@ module.exports = function () {
 
     //Listar proyecto
 
-    router.get('/proyectos/:url', proyectosController.proyectoPorURL)
+    router.get('/proyectos/:url', proyectosController.proyectoPorURL);
 
     //Actualizar el proyecto
 
@@ -44,11 +44,11 @@ module.exports = function () {
 
     //Tareas
 
-    router.post('/proyectos/:url', tareasController.agregarTarea);
+   // router.post('/proyectos/:url', tareasController.agregarTarea);
 
     //Update tarea 
 
-    router.patch('/tareas/:id', tareasController.cambiarEstadoTarea)
+  //  router.patch('/tareas/:id', tareasController.cambiarEstadoTarea);
 
     return router;
 
