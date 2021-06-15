@@ -75,7 +75,17 @@ exports.proyectoPorURL = async (request, response, next) => {
 
     //Tareas del proyecto actual
 
-    console.log(proyecto);
+    const tareas = await Tareas.findAll({
+        
+        where:
+            {proyectoId : proyecto.id
+            
+            }
+        });
+
+    console.log(tareas);
+
+
 
     
 
@@ -86,7 +96,7 @@ exports.proyectoPorURL = async (request, response, next) => {
         nombrePagina : 'Tareas del Proyecto',
         proyecto,
         proyectos,
-        //tareas
+        tareas
     })
 }
 

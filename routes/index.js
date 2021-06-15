@@ -44,7 +44,7 @@ module.exports = function () {
 
     //Tareas
 
-   // router.post('/proyectos/:url', tareasController.agregarTarea);
+    router.post('/proyectos/:url', tareasController.agregarTarea);
 
     //Update tarea 
 
